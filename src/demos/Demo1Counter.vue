@@ -1,15 +1,13 @@
 <script setup>
-import { reactive } from 'vue'
+import { reactive, toRefs } from 'vue'
 
 const state = reactive({ count: 0 })
-let { count } = state
-const increment = () => state.count++
 
-// DEMO 1 · Fix the stale value (slide 25)
-// 1. Click the button. It stays at 0. Vue bug or JavaScript bug?
-// 2. console.log(typeof count)   → "number", not a ref
-// 3. Fix 1: read state.count in the template
-// 4. Fix 2: import toRefs and use  const { count } = toRefs(state)
+// Plain destructuring copies the number out of the proxy:
+//   let { count } = state      → typeof count === 'number', never updates
+// toRefs gives each property a ref linked back to `state`.
+const { count } = toRefs(state)
+const increment = () => state.count++
 </script>
 
 <template>
