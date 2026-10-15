@@ -1,0 +1,14 @@
+{
+  "atlanta": { "city": "Atlanta", "current": { "temp": 22, "condition": "Partly cloudy" } },
+  "kingston": { "city": "Kingston", "current": { "temp": 31, "condition": "Sunny" } },
+  "nairobi": { "city": "Nairobi", "current": { "temp": 24, "condition": "Clear" } },
+  "accra": { "city": "Accra", "current": { "temp": 30, "condition": "Humid" } },
+  "bridgetown": { "city": "Bridgetown", "current": { "temp": 29, "condition": "Breezy" } },
+  "guatemala city": { "city": "Guatemala City", "current": { "temp": 21, "condition": "Mostly clear" } },
+  "san jose": { "city": "San José", "current": { "temp": 25, "condition": "Showers" } },
+  "new york": { "city": "New York", "current": { "temp": 15, "condition": "Cloudy" } },
+  "london": { "city": "London", "current": { "temp": 12, "condition": "Drizzle" } },
+  "tokyo": { "city": "Tokyo", "current": { "temp": 18, "condition": "Clear" } },
+  "reykjavik": { "city": "Reykjavik", "current": { "temp": 0, "condition": "Snow" } },
+  "brigadoon": { "city": "Brigadoon" }
+}
