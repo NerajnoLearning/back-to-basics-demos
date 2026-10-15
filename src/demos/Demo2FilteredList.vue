@@ -4,11 +4,15 @@ import cities from '../data/cities.js'
 
 const query = ref('')
 
-// DEMO 2 · Filtered list (slide 31)
-// 1. filter() on the search box
-// 2. map() each city to a display label
-// 3. toSorted() by name, then open "Source array" to show it's untouched
-const visible = computed(() => cities)
+// Computed should READ, never mutate.
+// toSorted() returns a new array; sort() would reorder `cities` itself.
+const visible = computed(() => {
+  const q = query.value.trim().toLowerCase()
+  return cities
+    .filter((c) => c.name.toLowerCase().includes(q))
+    .map((c) => ({ ...c, label: `${c.name}, ${c.country}` }))
+    .toSorted((a, b) => a.name.localeCompare(b.name))
+})
 </script>
 
 <template>
